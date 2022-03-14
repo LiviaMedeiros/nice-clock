@@ -1,0 +1,61 @@
+/*
+#kronii #ur  .o {animation-duration: 43200s;}
+#kronii #kr  .o {animation-duration: 3600s;}
+#kronii #nii .o {animation-duration: 60s;}
+*/
+
+#kronii #ur  .o {animation-duration: 37s;}
+#kronii #kr  .o {animation-duration: 19s;}
+#kronii #nii .o {animation-duration: 3s;}
+
+@keyframes kroniicopter{from{transform:rotate(0)}to{transform:rotate(1turn)}}
+html, body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+body {
+	text-align: center;
+	background: linear-gradient(to bottom left, #c7c7c7, #dfdfdf);
+}
+#kronii {
+	width: 100vmin;
+	height: 100vmin;
+	filter: drop-shadow(-8px 8px 8px rgba(0,0,0,.8));
+}
+
+#kronii g {
+	transform-origin: 600px 600px;
+}
+#kronii .o {
+	animation-name: kroniicopter;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	opacity: .9;
+}
+
+#kronii circle.outer {
+	fill: transparent;
+	stroke: url(#grad_circle);
+	stroke-width: 8;
+}
+#kronii circle.inner {
+	fill: url(#grad_circle);
+	transition: r 314ms;
+	cursor: none;
+}
+#kronii circle.inner:hover {
+	r: 220;
+}
+
+#kronii .o rect {
+	stroke: rgba(0,0,0,.15);
+	stroke-width: 1;
+}
+#kronii #kr .o>rect,
+#kronii #ur .o>rect {
+	fill: url(#grad_main);
+}
+#kronii #nii .o>rect {
+	fill: url(#grad_second);
+}
